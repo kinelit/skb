@@ -8,7 +8,10 @@ app.get('/', (req, res) => {
     hello: 'JS World',
   });
 });
-
+app.get('/task2a', (req, res) => {
+  const sum = +reg.query.a + +req.query.b;
+  res.send(sum);
+  });
 app.listen(3000, () => {
   console.log('Your app listening on port 3000!');
 });
